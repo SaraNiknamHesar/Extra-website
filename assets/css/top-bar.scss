@@ -1,0 +1,33 @@
+$main_button_color: #8ed457;
+$white_text_color: #FFFFFF;
+.logo-img-style {
+  width: 100%;
+  height: 65px;
+}
+
+.buy-and-download {
+  background: $main_button_color;
+}
+
+.icon {
+  background-image: url("../img/basket.svg");
+  height: 24px;
+  width: 21px;
+  background-repeat: no-repeat;
+  margin-right: 14px;
+}
+
+.buy-and-download:last-child {
+  color: $white_text_color;
+
+}
+
+
+.close {
+  display: block;
+  width: 15px;
+  height: 15px;
+  //margin-left: 10px;
+  background-repeat: no-repeat;
+  background-image: url("../img/cross.svg");
+}
