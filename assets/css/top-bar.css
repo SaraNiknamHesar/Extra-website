@@ -3,7 +3,10 @@
 
 .header-top {
   box-shadow: 5px 5px 15px #C9C9C9;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  transition: top 1s ease !important;
+  position: relative;
+  top: 0; }
 
 .logo-img-style {
   width: 100%;
@@ -11,8 +14,15 @@
 
 .buy-and-download {
   background: #8ed457;
-  padding: 10px;
-  border-radius: 5px; }
+  padding: 9px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  border: 0 !important;
+  transition: all .3s ease; }
+
+.buy-and-download:hover {
+  background: #8ed457;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
 
 .icon-basket {
   background-image: url("../img/basket.svg");
@@ -51,7 +61,7 @@
 
 .desk .icon:hover {
   background-color: #d1d1d1;
-  border: 1px solid red;
+  border: 1px solid #c57d7d;
   border-radius: 5px; }
 
 .mobile {
@@ -72,31 +82,58 @@
   width: 30px;
   height: 22px;
   background-repeat: no-repeat;
-  background-image: url("../img/cross.svg");
-  margin: 10px; }
+  background-image: url("../img/cross.svg"); }
 
 .preview-text {
   color: #3C4354;
   font-size: 20px;
   font-weight: bold; }
 
-@media screen and (min-width: 992px) {
-  .logo-img-style {
-    width: 50% !important;
-    height: 65px; } }
-@media screen and (max-width: 992px) {
-  .logo-img-style {
-    width: 50% !important;
-    height: 65px; }
+.logo-img-style {
+  width: auto;
+  height: 65px; }
 
+.header-top.active {
+  position: absolute;
+  top: -95px; }
+
+.showTopBar {
+  top: 0; }
+
+.showTopBar img {
+  width: 65px;
+  height: auto;
+  position: absolute;
+  top: -5%;
+  border-radius: 0 0 4px 4px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  cursor: pointer;
+  z-index: 1000; }
+
+@media screen and (max-width: 576px) {
+  .logo-img-style {
+    width: 65% !important;
+    height: 65px; } }
+@media screen and (min-width: 550px) and (max-width: 992px) {
   .desk {
     display: none !important; } }
 @media screen and (min-width: 765px) and (max-width: 992px) {
   .preview-text {
     font-size: 18px; } }
 @media screen and (max-width: 576px) {
+  .buy-and-download {
+    width: auto;
+    padding: 0;
+    transition: all .3s ease; }
+
+  .icon-basket {
+    margin: 4px; }
+
   .buy-and-download a {
-    display: none; } }
+    display: none;
+    transition: all .3s ease; } }
 @media screen and (min-width: 576px) and (max-width: 618px) {
   .buy-and-download > a:last-child {
     font-size: 14px !important; } }
