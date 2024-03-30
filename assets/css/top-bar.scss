@@ -12,12 +12,12 @@ $white_text_color: #ffffff;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
-  position: absolute;
   height: 66px;
-  top: 0;
   padding: 10px;
-
   justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  transition: all linear 0.5s;
 }
 .top-bar .logo-col {
   display: flex;
@@ -59,7 +59,6 @@ $white_text_color: #ffffff;
   flex-direction: row-reverse;
   align-content: center;
   justify-content: space-between;
-
 }
 .top-bar .device-col .devices .icon {
   width: 30px;
@@ -132,25 +131,44 @@ $white_text_color: #ffffff;
   background-repeat: no-repeat;
   background-image: url("../img/cross.svg");
 }
-.devices:hover .icon.laptop{
+.devices:hover .icon.laptop {
   display: block !important ;
   margin: auto;
- 
 }
-.devices .icon:hover{
+.devices .icon:hover {
   background-color: #d1d1d1;
-  transition: .3s all;
- 
+  transition: 0.3s all;
 }
-.devices:hover .icon.icon.tablet{
+.devices:hover .icon.icon.tablet {
   display: block !important ;
   margin: auto;
- 
 }
-.devices:hover .icon.mobile{
+.devices:hover .icon.mobile {
   display: block !important ;
   margin: auto;
- 
+}
+.showTopBar {
+  border-radius: 0 0 4px 4px;
+  display: block;
+  max-width: 120px;
+  position: absolute;
+  background-color: #ffffff;
+  left: 10px;
+  width: 50px;
+  height: 30px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  background-image: url("/assets/img/arrow-down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+}
+.close-top-bar {
+  position: absolute;
+  top: -95px;
 }
 @media screen and (max-width: 1250px) {
   .top-bar .title-col {
