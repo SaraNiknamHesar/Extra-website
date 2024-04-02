@@ -8,6 +8,7 @@ body {
   width: 100%;
 }
 .top-bar {
+  top: 0;
   position: relative;
   display: flex;
   height: 10vh;
@@ -15,6 +16,7 @@ body {
   justify-content: space-between;
   align-items: center;
   box-shadow: 10px 0 20px 0 rgba(0, 0, 0, 0.2);
+  transition: all linear 0.5s;
 }
 .logo-rtl-theme img {
   width: 150px;
@@ -44,7 +46,7 @@ body {
 }
 .buy-and-download .basket {
   width: 20px;
-  background-image: url(../img/basket.svg);
+  background-image: url("../img/basket.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -56,11 +58,47 @@ body {
 }
 .multiple-device-icon .icon.desktop {
   width: 20px;
-
   background-image: url("../img/desktop.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 .close-btn {
   width: 18px;
+}
+.scroll-top-bar {
+  top: auto;
+}
+.scroll-top-bar {
+  position: absolute;
+  top: -120px;
+}
+.showTopBar {
+  display: none !important;
+  border-radius: 0 0 4px 4px;
+  display: block;
+  max-width: 120px;
+  position: absolute;
+  background-color: #ffffff;
+  left: 10px;
+  width: 40px;
+  height: 24px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+.showTopBar img {
+  width: 32px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/arrow-down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  font-weight: lighter;
+}
+.show-close-btn {
+  display: block !important;
 }
