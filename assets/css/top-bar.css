@@ -1,91 +1,158 @@
-* {
-  font-family: Helvetica, Arial, Georgia, Tahoma and Roboto; }
-
-body {
-  box-sizing: border-box; }
-
-.container-fluid {
-  width: 100%; }
-
 .top-bar {
-  top: 0;
-  position: relative;
-  display: flex;
-  height: 10vh;
+  width: 100%;
   padding: 10px;
-  justify-content: space-between;
-  align-items: center;
   box-shadow: 10px 0 20px 0 rgba(0, 0, 0, 0.2);
-  transition: all linear 0.5s; }
-
-.logo-rtl-theme img {
-  width: 150px;
-  height: auto;
-  flex: 0 0 150px; }
-
-.header-title h1 {
-  font-size: 20px;
-  color: #3c4354; }
-
-.thrid-header-part {
+  height: 50px;
+  justify-content: flex-start;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  width: 17%; }
+  position: relative;
+  z-index: 1000;
+  top: 0; }
 
-.buy-and-download {
+.top-bar .logo-col {
   display: flex;
-  justify-content: space-around;
-  color: white;
-  border: 1px solid #8ed457;
-  background-color: #8ed457;
-  padding: 10px 12px;
+  flex: 0 0 150px;
+  margin-left: auto; }
+
+.top-bar .logo-col .logo {
+  width: 100%;
+  height: 45px;
+  display: inline-block; }
+
+.top-bar .title-col {
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: center; }
+
+.top-bar .title-col .title {
+  color: #3c4354;
+  font-size: 16px;
+  display: inline-block;
+  transform: translateY(3px); }
+
+.top-bar .devices-col {
+  display: flex;
+  flex: 0 0 10%;
+  flex-direction: row-reverse; }
+
+.top-bar .devices-col .devices {
+  width: 40px;
+  height: 40px;
   border-radius: 5px;
-  width: 70%;
-  font-size: 16px; }
-
-.buy-and-download .basket {
-  width: 20px;
-  background-image: url("../img/basket.svg");
-  background-position: center;
-  background-repeat: no-repeat; }
-
-.multiple-device-icon {
   background-color: #f1f1f1;
-  max-width: 120px;
-  padding: 10px;
-  border-radius: 4px; }
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around; }
 
-.multiple-device-icon .icon.desktop {
-  width: 20px;
-  background-image: url("../img/desktop.svg");
+.top-bar .devices-col .devices .icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s all;
+  display: inline-block;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 20px 20px; }
 
-.close-btn {
-  width: 18px; }
+.top-bar .devices-col .devices:hover {
+  width: 120px; }
 
-.scroll-top-bar {
-  top: auto; }
+.top-bar .devices-col .devices .icon.mobile {
+  background-image: url("../img/mobile.svg"); }
+
+.top-bar .devices-col .devices .icon.laptop {
+  background-image: url("../img/laptop.svg"); }
+
+.top-bar .devices-col .devices .icon.tablet {
+  background-image: url("../img/tablet.svg"); }
+
+.top-bar .devices-col .devices .icon.desktop {
+  background-image: url("../img/desktop.svg"); }
+
+.top-bar .devices-col .devices .icon.mobile,
+.top-bar .devices-col .devices .icon.laptop,
+.top-bar .devices-col .devices .icon.tablet {
+  display: none; }
+
+.top-bar .devices-col .devices:hover .icon.mobile {
+  display: inherit; }
+
+.top-bar .devices-col .devices:hover .icon.icon.laptop {
+  display: inherit; }
+
+.top-bar .devices-col .devices:hover .icon.icon.tablet {
+  display: inherit; }
+
+.close-col {
+  display: flex;
+  flex: 0 0 25px;
+  margin-right: 15px;
+  flex-direction: row-reverse; }
+
+.close-col .close {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-repeat: no-repeat;
+  background-image: url("../img/cross.svg"); }
+
+.btn-col {
+  display: flex;
+  flex: 0 0 161px;
+  margin-right: 15px;
+  flex-direction: row-reverse; }
+
+.top-bar .buy-btn {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  transition: 0.3s all;
+  background-color: #8ed457;
+  white-space: nowrap; }
+
+.top-bar .buy-btn:hover {
+  transition: 0.3s all;
+  background-color: #76d22d;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
+
+.top-bar .buy-btn .icon {
+  width: 20px;
+  height: 17px;
+  margin-left: 10px;
+  display: inline-block;
+  transform: translateY(4px);
+  background-repeat: no-repeat;
+  background-image: url("../img/basket.svg"); }
+
+.top-bar .devices-col .devices .icon:hover {
+  transition: 0.3s all;
+  background-color: #d1d1d1; }
 
 .scroll-top-bar {
   position: absolute;
-  top: -120px; }
+  top: -190px;
+  transition: all 3s ease; }
 
 .showTopBar {
   display: none !important;
+  width: 40px;
+  height: 24px;
   border-radius: 0 0 4px 4px;
   display: block;
   max-width: 120px;
   position: absolute;
-  background-color: #ffffff;
-  left: 10px;
-  width: 40px;
-  height: 24px;
+  background: #fff;
+  left: 20px;
+  top: 0;
+  padding: 4px 8px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  z-index: 5;
-  cursor: pointer;
-  transition: all 0.5s linear; }
+  transition: all 0.5s linear;
+  cursor: pointer; }
 
 .showTopBar img {
   width: 32px;
@@ -93,11 +160,57 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/arrow-down.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  font-weight: lighter; }
+  transform: translate(-50%, -50%); }
 
 .show-close-btn {
-  display: block !important; }
+  display: block !important;
+  transition: all 0.5s linear; }
+
+.nav-bar {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 14%);
+  margin: 20px auto;
+  align-items: center; }
+
+.nav-bar .extra-logo {
+  display: flex;
+  flex: 0 0 171px;
+  background-color: rebeccapurple; }
+
+.nav-bar .extra-logo a img {
+  width: 100%;
+  height: 55px; }
+
+.nav-menu {
+  display: flex;
+  flex: 0 0 50%; }
+
+.nav-bar .nav-menu .menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none; }
+
+.nav-bar .nav-menu .menu li {
+  list-style: none; }
+
+.nav-bar .nav-menu .menu li:hover {
+  color: white;
+  background-color: #ffae00;
+  border-radius: 3px;
+  box-shadow: 0px 10px 30px 0px rgba(255, 174, 0, 0.47); }
+
+.nav-bar .nav-menu .menu li a {
+  text-decoration: none;
+  color: black; }
+
+@media screen and (max-width: 765px) {
+  .top-bar .title-col {
+    display: none !important; }
+
+  .devices-col {
+    display: none !important; } }
+
+/*# sourceMappingURL=top-bar.css.map */

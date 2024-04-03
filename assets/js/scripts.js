@@ -1,5 +1,5 @@
 
-document.querySelector('.close-btn').addEventListener('click', (event) => {
+document.querySelector('.close-col').addEventListener('click', (event) => {
     event.preventDefault();
     document.querySelector('.top-bar').classList.add('scroll-top-bar');
     setTimeout(() => {
@@ -11,5 +11,10 @@ function showTopBar() {
 }
 document.querySelector('.showTopBar').addEventListener('click', (event) => {
     event.currentTarget.classList.remove('show-close-btn');
-    document.querySelector('.top-bar').classList.remove('scroll-top-bar')
+    setTimeout(() => {
+        remove();
+    },370);
 });
+function remove() {
+    document.querySelector('.top-bar').classList.remove('scroll-top-bar')
+}
