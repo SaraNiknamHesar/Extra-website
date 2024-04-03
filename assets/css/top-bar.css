@@ -176,8 +176,7 @@
 
 .nav-bar .extra-logo {
   display: flex;
-  flex: 0 0 171px;
-  background-color: rebeccapurple; }
+  flex: 0 0 171px; }
 
 .nav-bar .extra-logo a img {
   width: 100%;
@@ -194,17 +193,89 @@
   text-decoration: none; }
 
 .nav-bar .nav-menu .menu li {
+  position: relative;
   list-style: none; }
 
 .nav-bar .nav-menu .menu li:hover {
   color: white;
   background-color: #ffae00;
   border-radius: 3px;
-  box-shadow: 0px 10px 30px 0px rgba(255, 174, 0, 0.47); }
+  box-shadow: 0px 10px 30px 0px rgba(255, 174, 0, 0.47);
+  padding: 5px;
+  margin: -5px;
+  transition: all .2s ease-in-out; }
+
+.elements-arrow {
+  display: flex;
+  align-items: center; }
+
+.element-li img {
+  width: 25px;
+  height: 25px;
+  color: black; }
+
+.nav-bar .nav-menu .menu li:hover a {
+  color: white; }
 
 .nav-bar .nav-menu .menu li a {
   text-decoration: none;
   color: black; }
+
+.left-part-menu {
+  display: flex;
+  flex: 0 0 21%;
+  margin-right: auto;
+  justify-content: flex-end; }
+
+.social-icons {
+  display: flex;
+  align-items: center; }
+
+.left-part-menu .social-icons .instagram-icon-nav {
+  background: #833ab4;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  color: #ffffff;
+  padding: 5px;
+  margin-left: 5px;
+  border-style: none;
+  border-width: 2px;
+  border-radius: 4px;
+  box-shadow: 0px 5px 12px 0px rgba(175, 175, 175, 0.34); }
+
+.left-part-menu .social-icons .youtube-icon-nav {
+  color: white;
+  background-color: #cf2e2e;
+  border-width: 2px;
+  padding: 5px;
+  border-radius: 4px;
+  margin-left: 5px; }
+
+.left-part-menu .buy-template a {
+  color: #ffffff;
+  font-weight: 600;
+  background-color: #8bc34a;
+  padding: 14px 24px;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 6px 17px 0px rgba(139, 195, 74, 0.22); }
+
+.mega-menu {
+  background-color: #282828;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0 13px 0; }
+
+.mega-menu div {
+  width: 300px;
+  border-left: 1px solid #414141; }
+
+.mega-menu .general-elements {
+  padding-right: 20px; }
+
+.mega-menu .general-elements p {
+  color: #ABABAB; }
 
 @media screen and (max-width: 765px) {
   .top-bar .title-col {
