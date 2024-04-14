@@ -11,4 +11,8 @@ $(document).ready(function () {
         $(".showTopBar").removeClass("show-close-btn");
     })
 
+    $(".bars-menu-icon").click(function () {
+        // $(".sidebar-menu").addClass("important")
+        console.log("Sara");
+    })
 })
