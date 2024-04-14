@@ -426,9 +426,6 @@
   .michele::after {
     align-items: right;
     position: relative; } }
-.important {
-  opacity: 1 !important; }
-
 .sidebar-menu {
   position: absolute;
   background: #282828;
@@ -436,8 +433,11 @@
   right: -52px;
   width: 458px;
   height: 100vh;
-  opacity: 0;
+  visibility: hidden;
   transition: all 10s ease; }
+
+.visible {
+  visibility: visible; }
 
 .sidebar-menu ul {
   padding: 0; }
@@ -454,7 +454,7 @@
 .icon-elements {
   border-right: 1px solid rgba(167, 167, 167, 0.2);
   width: 4vw;
-  height: 4vw; }
+  height: 7vh; }
 
 .sidebar-menu ul div {
   display: flex;

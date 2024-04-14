@@ -24,9 +24,12 @@ document.querySelector(".mega-menu-tab").addEventListener("mouseover", function 
 document.querySelector(".mega-menu-tab").addEventListener("mouseleave", function (event) {
     document.querySelector(".mega-menu").classList.remove("d-block-mega-menu");
 });
-// document.querySelector(".bars-menu-icon").addEventListener("click", function (event) {
-//     document.querySelector(".sidebar-menu").style.opacity = 1;
-// });
+document.querySelector(".bars-menu-icon").addEventListener("click", function (event) {
+    setTimeout(() => {
+        document.querySelector(".sidebar-menu").style.visibility = "visible";
+    }, 300)
+
+});
 
 
 // })
