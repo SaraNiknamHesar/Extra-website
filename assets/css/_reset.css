@@ -1,11 +1,11 @@
-@font-face {
-  font-family: "my-font";
-  src: url("../fonts/StoryElementRegular-X3RWa.ttf");
-}
+/* @font-face { */
+  /* font-family: "my-font";
+  src: url("../fonts/StoryElementRegular-X3RWa.ttf"); */
+/* } */
 body {
   margin: 0;
   font-family: "my-font";
-  font-weight: lighter;
+  font-weight: bolder;
   /* box-sizing: border-box; */
 }
 *,
