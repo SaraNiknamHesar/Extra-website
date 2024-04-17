@@ -468,6 +468,24 @@
   width: calc(100% - 14%);
   margin: auto;
 }
+.main h1 {
+  font-size: 300px;
+  margin: 0;
+  text-align: center;
+  color: #ffbb00;
+}
+.main h1::selection {
+  background-color: #ffbb00;
+  color: white;
+}
+.bg-curved path{
+  fill: #515151 !important;
+}
+.rectangle-bg{
+  background-color: #515151;
+  width: 100%;
+  height: 14vh;
+}
 // End-main-section-style
 @media screen and (max-width: 765px) {
   .top-bar .title-col {
